@@ -1,0 +1,38 @@
+{
+	"authenticate": "inherit",
+	"uri_prefix": "/js/api/cloudstack",
+	"services": [
+		{
+			"protocol": "GET",
+			"chain": ["space_rbac"],
+			"uri": "groups/",
+			"params": [],
+			"module": "groups.js",
+			"method": "getAllGroups"
+		},
+		{
+			"protocol": "GET",
+			"chain": ["space_rbac"],
+			"uri": "groups/:groupid/instances",
+			"params": [{"name": "groupid", "type": "PathParam"}],
+			"module": "instances.js",
+			"method": "getGroupInstances"
+		},
+		{
+			"protocol": "GET",
+			"chain": ["space_rbac"],
+			"uri": "groups/:groupid/servicespacks",
+			"params": [{"name": "groupid", "type": "PathParam"}],
+			"module": "servicepacks.js",
+			"method": "getGroupServices"
+		},
+		{
+			"protocol": "GET",
+			"chain": ["space_rbac"],
+			"uri": "servicespacks",
+			"params": [],
+			"module": "servicepacks.js",
+			"method": "getAvailableServices"
+		}
+	]
+}

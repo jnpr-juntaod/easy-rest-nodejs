@@ -1,0 +1,57 @@
+{
+  "name": "easy-rest",
+  "description": "JunosSpace Rest Server.",
+  "version": "1.0.0",
+  "homepage": "",
+  "main": "./index",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.3.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JSpaceTeam/easy-rest"
+  },
+  "dependencies": {
+      "async" : "0.9.0",
+      "express": "3.3.8",
+      "redis": "0.10.3",
+      "ink-docstrap": "0.4.5",
+      "istanbul": "0.2.11",
+      "jsdoc": "3.3.0-alpha8",
+      "log4js": "0.6.14",
+      "mkdirp": "0.5.0",
+      "mocha": "1.20.1",
+      "mysql": "2.3.2",
+      "node.extend": "1.0.10",
+      "passport": "0.2.0",
+      "passport-http": "0.2.2",
+      "passport-strategy": "1.0.0",
+      "requirejs": "2.1.14",
+      "restify": "2.8.1",
+      "socket.io": "1.0.6",
+      "stompjs": "2.3.2",
+      "underscore": "1.6.0"
+  },
+  "devDependencies": {
+      "async" : "0.9.0",
+      "express": "3.3.8",
+      "redis": "0.10.3",
+      "ink-docstrap": "0.4.5",
+      "istanbul": "0.2.11",
+      "jsdoc": "3.3.0-alpha8",
+      "log4js": "0.6.14",
+      "mkdirp": "0.5.0",
+      "mocha": "1.20.1",
+      "mysql": "2.3.2",
+      "node.extend": "1.0.10",
+      "passport": "0.2.0",
+      "passport-http": "0.2.2",
+      "passport-strategy": "1.0.0",
+      "requirejs": "2.1.14",
+      "restify": "2.8.1",
+      "socket.io": "1.0.6",
+      "stompjs": "2.3.2",
+      "underscore": "1.6.0"
+  }
+}

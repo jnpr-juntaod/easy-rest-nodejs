@@ -1,0 +1,14 @@
+{
+    "extensions": {
+        "requestBegin": [
+            {"priority": 10, "module": "system/stack/extensions-impl/jmp-request-begin-security"},
+            {"priority": 10, "module": "system/stack/extensions-impl/jmp-request-begin-apictx"}
+        ],
+        "requestFinished": [
+            {"priority": 10, "module": "system/stack/extensions-impl/jmp-request-end"}
+        ],
+        "beforeWriteData": [
+            {"priority": 10, "module": "system/stack/extensions-impl/jmp-write-data.js"}
+        ]
+    }
+}

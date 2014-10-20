@@ -1,0 +1,45 @@
+{"groups":[
+	{
+		"name":"DefaultGroup",
+		"services":"*",
+		"instances":[
+			{"ip": "10.208.11.166", "port": "9091"},
+			{"ip": "10.208.11.166", "port": "9092"},
+			{"ip": "10.208.11.167", "port": "9091"},
+			{"ip": "10.208.11.167", "port": "9092"},
+			{"ip": "10.208.11.167", "port": "9093"}
+		]
+	},
+	{
+		"name":"DeviceServiceGroup",
+		"services":[{"servicepack": "nd_cmp", "servicename": "service-nd_cmp-devicemgmt.tar.gz"}],
+		"instances":[
+			{"ip": "10.208.11.166", "port": "8090"},
+			{"ip": "10.208.11.166", "port": "8091"},
+			{"ip": "10.208.11.167", "port": "8090"}
+		]
+	},
+	{
+		"name":"JobServiceGroup",
+		"services":[{"servicepack": "nd_cmp", "servicename": "service-nd_cmp-jobmgmt.tar.gz"}],
+		"instances":[
+			{"ip": "10.208.11.168", "port": "8095"},
+			{"ip": "10.208.11.168", "port": "8096"},
+			{"ip": "10.208.11.169", "port": "8095"}
+		]
+	},
+	{
+		"name": "UIGroup",
+		"services":[
+			{"servicepack": "nd_cmp", "servicename": "webapp-nd_cmp-default.tar.gz"},
+			{"servicepack": "nd_cmp", "servicename": "webapp-nd_cmp-scudoc.tar.gz"},
+			{"servicepack": "nd_cmp", "servicename": "webapp-nd_cmp-devicemgmt.tar.gz"}
+		],
+		"instances":[
+			{"ip": "10.208.11.168", "port": "8097"},
+			{"ip": "10.208.11.168", "port": "8098"},
+			{"ip": "10.208.11.169", "port": "8097"}
+		]
+	}
+	]
+}

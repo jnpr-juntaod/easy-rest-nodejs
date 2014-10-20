@@ -1,0 +1,2 @@
+wdefine(['css!./theme'], function(){
+});

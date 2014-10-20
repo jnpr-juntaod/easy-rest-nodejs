@@ -1,0 +1,90 @@
+{
+	"authenticate": "",
+	"uri_prefix": "data",
+	"dataSource":"",
+    "modules": [
+        {
+            "name": "test-management",
+            "apis": [
+                {
+                    "protocol": "get",
+                    "chain": [],
+                    "uri": "codecoverage",
+                    "params": [],
+                    "produces": ["text/html"],
+                    "module": "codecoverage.js",
+                    "method": "renderReport"
+                },
+                {
+                    "protocol": "get",
+                    "chain": [],
+                    "uri": "codecoverage/download",
+                    "params": [],
+                    "produces": ["application/zip"],
+                    "module": "codecoverage.js",
+                    "method": "download"
+                },
+                {
+                    "protocol": "get",
+                    "chain": [],
+                    "uri": "codecoverage/baseline",
+                    "params": [],
+                    "produces": ["application/json"],
+                    "module": "codecoverage.js",
+                    "method": "resetReport"
+                },
+                {
+                    "protocol": "get",
+                    "chain": [],
+                    "uri-reg": "codecoverage\/(servicebundle[=]?[^\/]+[^\/]$)",
+                    "params": [{"name": "servicebundle", "type": "MatrixParam"}],
+                    "produces": ["text/html"],
+                    "module": "codecoverage.js",
+                    "method": "renderReportModule"
+                },
+                {
+                    "protocol": "get",
+                    "chain": [],
+                    "uri-reg": "codecoverage\/show\/(p[=]?.*)",
+                    "params": [{"name": "p", "type": "MatrixParam"}],
+                    "produces": ["text/html"],
+                    "module": "codecoverage.js",
+                    "method": "renderReportUrl"
+                },
+                {
+                    "protocol": "get",
+                    "chain": [],
+                    "uri": "codecoverage/asset/prettify.css",
+                    "params": [],
+                    "produces": ["text/css"],
+                    "module": "codecoverage.js",
+                    "method": "assetcss"
+                },
+                {
+                    "protocol": "get",
+                    "chain": [],
+                    "uri": "codecoverage/asset/prettify.js",
+                    "params": [],
+                    "produces": ["text/javascript"],
+                    "module": "codecoverage.js",
+                    "method": "assetjs"
+                }
+            ]
+        },
+        {
+            "name": "cache-management",
+            "apis": [
+                {
+                    "protocol": "GET",
+                    "chain": [],
+                    "uri-reg": "testentry\/(action[=]?[^\/]+[^\/]$)",
+                    "params": [{"name": "action", "type": "MatrixParam"}],
+                    "produces": ["application/json"],
+                    "module": "testentry-cache.js",
+                    "method": "test"
+                }
+            ]
+        }
+    ]
+
+}

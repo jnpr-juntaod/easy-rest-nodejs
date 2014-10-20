@@ -1,0 +1,35 @@
+{
+	"appenders": [
+    { 
+    	"category": "system", 
+    	"type": "file",
+    	"filename": "system.log",
+    	"maxLogSize": 10485760,
+    	"backups": 10,
+    	"layout": { 
+    		"type": "pattern",
+          	"pattern": "%m"
+    	} 
+    },
+    { 
+    	"category": "server", 
+    	"type": "file", 
+    	"filename": "server.log",
+    	"maxLogSize": 10485760,
+    	"backups": 10
+    },
+    {
+        "category": "notification",
+        "type": "file",
+        "filename": "notification.log",
+        "maxLogSize": 10485760,
+        "backups": 10
+    }
+    ],
+  
+    "levels": {
+    	"system":  "ALL",
+    	"server":  "ALL",
+        "notification":  "ALL"
+    }
+}
